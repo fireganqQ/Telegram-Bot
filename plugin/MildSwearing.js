@@ -1,4 +1,4 @@
-'use strict';
+²'use strict';
 
 const Composer = require('telegraf/composer');
 
@@ -14,7 +14,7 @@ module.exports = Composer.match(badWordsBan, async (ctx, next) => {
     if (ctx.chat.type.endsWith('group')) {
             if (!ctx.from._is_in_admin_list) {
 
-                await ctx.deleteMessage("selam")                       //Küfürlü mesajı siler.
+                await ctx.deleteMessage()                       //Küfürlü mesajı siler.
                 await ctx.muteChatMember(ctx.from.id)         //Kişiyi yasaklar açmak için başındaki // işareti silin.
 
             }
