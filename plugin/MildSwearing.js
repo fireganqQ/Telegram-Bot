@@ -15,7 +15,7 @@ module.exports = Composer.match(badWordsBan, async (ctx, next) => {
             if (!ctx.from._is_in_admin_list) {
 
                 await ctx.deleteMessage()                       //Küfürlü mesajı siler.
-                //await ctx.kickChatMember(ctx.from.id)         //Kişiyi yasaklar açmak için başındaki // işareti silin.
+                await ctx.muteChatMember(ctx.from.id)         //Kişiyi yasaklar açmak için başındaki // işareti silin.
 
             }
     }
